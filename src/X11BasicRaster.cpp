@@ -36,7 +36,7 @@ X11Window::X11Window(int32_t width, int32_t height)
         return;
     }
 
-    window_ = XCreateSimpleWindow(display_, root_, 0, 0, 800, 600, 0, 0, 0xffffffff);
+    window_ = XCreateSimpleWindow(display_, root_, 0, 0, width_, height_, 0, 0, 0xffffffff);
     if (None == window_)
     {
         fprintf(stderr, "Failed to create window");
